@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <link rel="stylesheet" href="../cs/global.css">
+        
+
+
+        <!--Scripts Jquery para máscaras-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+
+        <!-- Título da página (aparece na aba) -->
+        <title>Cadastro-Locador</title>
+    </head>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!-- <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <!-- <li class="nav-item"><a class="nav-link" href="locador.html">Cadastro Locador</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="../Formulario/index.html">Cadastro Morador</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.php">Início</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <body> 
+        <div class="container contact-pop">
+            <div class="row justify-content-center">
+             
+              <div class="col-md-10 pl-0" id="about">
+                <div class="content">
+                    <div> 
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div class="text-center">
+            <!-- <h1 id="titulo">RoomMatch</h1> -->
+            <img class="mw-100" src="img/lo.png" alt="logo">
+            <p id="subtitulo">Cadastro Locador</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form id="form" action="../php/cadastro_locador.php" method="POST">
+
+            <div class="row">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="col-md-6 mb-3">
+                    <label for="nome"><strong>Nome Completo </strong></label>
+                    <input type="text" name="nome" id="nome" class="form-control" maxlength=100 required placeholder="Digite Seu nome completo" >
+                </div>
+            
+                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+                <div class="col-md-6 mb-3">
+                    <label for="cpf"><strong>CPF</strong></label>
+                    <input type="text" name="cpf" id="cpf" class="form-control" onkeypress="$(this).mask('000.000.000-00');" maxlength=14 required  placeholder="Digite Seu CPF">
+                </div>
+            </div> 
+
+            
+
+            <!-- Campo de email com-->
+            <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="telefone"><strong>Telefone</strong></label>
+                <input type="text" name="telefone" id="telefone" class="form-control"  maxlength=15 onkeypress="$(this).mask('(00) 0000-00009')" required   placeholder="(xx) xxxxx-xxxx">
+
+
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" name="email" id="email"  class="form-control"  maxlength=100 required  placeholder="Digite Seu e-mail">
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="password"><strong>Senha</strong></label>
+                    <input type="password" name="password" id="password" class="form-control"  maxlength=12 required  placeholder="Digite Senha">
+                </div>
+    
+                <div class="col-md-6 mb-3">
+                    <label for="password2"><strong>Confirmação Da Senha</strong></label>
+                    <input type="password" name="password" id="password2" class="form-control"  maxlength=12 required  placeholder="Digite Novamente sua senha">
+                </div>
+                </div>
+
+                <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="date"><strong>Data de Nascimento</strong></label>
+                    <input type="date" name="date" id="date" class="form-control" required  placeholder="Digite Sua Data de nascimento">
+                </div>
+            
+                
+                    <div class="col-md-6 mb-3">
+                        <label for="sexo"><strong>Sexo</strong></label>
+                        <select id="sexo" name="sexo" class="form-control" required>
+                          <option selected disabled value="">Selecione</option>
+                          <option value="m" >Masculino</option>
+                          <option  value="f">Feminino</option>
+                          <option value="n" >Prefiro não responder</option>
+                          
+                        </select>
+                    </div>
+                    
+                    </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <label for="pet"><strong> Possui Pets?</strong></label>
+                <select id="pet" name="pet" class="form-control" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option value=0>Não</option>
+                  <option value=1>Sim</option>
+                  
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="qpet"><strong>Quantidade De Pets</strong></label>
+                <input type="number" name="qpet" id="qpet"  class="form-control" min=0  placeholder="Quantidade de pets">
+            </div>
+        </div>
+
+            
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="vegetariano"><strong>Vegetariano?</strong></label>
+                    <select id="vegetariano" class="form-control"  name="vegetariano" required>
+                      <option selected disabled value="">Selecione</option>
+                      <option value=0>Não</option>
+                      <option value=1>Sim</option>
+                      
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="vegano"><strong> Vegano?</strong></label>
+                    <select id="vegano" class="form-control"  name="vegano" required>
+                      <option selected disabled value="">Selecione</option>
+                      <option value=0>Não</option>
+                      <option value=1>Sim</option>
+                      
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="cozinha"><strong>Sabe Cozinhar?</strong></label>
+                    <select id="cozinha" class="form-control"  name="cozinha" required>
+                      <option selected disabled value="">Selecione</option>
+                      <option value=0>Não</option> class="form-control" 
+                      <option value=1>Sim</option>
+                      
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="faculdade"><strong>Faculdade/Estudos</strong></label>
+                    <input type="text" name="faculdade" id="faculdade" class="form-control"  maxlength=100  placeholder="Instituição de ensino">
+                </div>
+    
+                <div class="col-md-6 mb-3">
+                    <label for="trabalho"><strong>Onde Trabalha</strong></label>
+                    <input type="text" name="trabalho" id="trabalho" class="form-control"  maxlength=100  placeholder="Digite Seu local de trabalho" >
+                </div>
+                </div>
+
+                <!-- <div class="row">
+
+                    <div class="campo">
+                        <label for="endereco"><strong>Endereço Com Número</strong></label>
+                        <input type="text" name="endereco" id="endereco" maxlength=200 required  placeholder="Digite Seu endereço">
+                    </div>
+        
+                    <div class="campo">
+                        <label for="bairro"><strong>Bairro</strong></label>
+                        <input type="text" name="text" id="bairro" maxlength=200 required  placeholder="Digite Seu bairro">
+                    </div>
+                    <div class="campo">
+                        <label for="cidade"><strong>Cidade</strong></label>
+                        <input type="text" name="cidade" id="cidade" maxlength=100 required  placeholder="Digite Sua cidade">
+                    </div>
+
+                
+                    <div class="campo">
+                        <label for="estado"><strong>Estado</strong></label>
+                        <select id="estado" name="estado" required>
+                          <option value="AC" >Acre</option>
+                          <option value="AL">Alagoas</option>
+                          <option value="AP" >Amapá</option>
+                          <option value="AM" >Amazonas</option>
+                          <option value="BA" >Bahia</option>
+                          <option value="CE" >Ceará</option>
+                          <option value="DF" >Distrito Federal</option>
+                          <option value="ES" >Espirito Santo</option>
+                          <option value="GO" >Goiás</option>
+                          <option value="MA" >Maranhão</option>
+                          <option value="MT" >Mato Grosso</option>
+                          <option value="MS" >Mato Grosso do Sul</option>
+                          <option value="MG" >Minas Gerais</option>
+                          <option value="PA" >Pará</option>
+                          <option value="PB" >Paraíba</option>
+                          <option value="PE" >Pernambuco</option>
+                          <option value="PI" >Piauí</option>
+                          <option value="RJ" >Rio de Janeiro</option>
+                          <option value="RN" >Rio Grande do Norte</option>
+                          <option value="RS" >Rio Grande do Sul</option>
+                          <option value="RO" >Rondônia</option>
+                          <option value="RR" >Roraima</option>
+                          <option value="SC" >Santa Catarina</option>
+                          <option value="SP" >São Paulo</option>
+                          <option value="SE" >Sergipe</option>
+                          <option value="TO" >Tocantins</option>
+			</select>
+
+                </div>
+        
+                    
+                </div> -->
+
+                
+            
+          
+
+            <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="moto"><strong>Possui Moto?</strong></label>
+                <select id="moto" class="form-control"  name="moto" >
+                  <option selected disabled value="">Selecione</option>
+                  <option value=0>Não</option>
+                  <option value=1>Sim</option>
+                  
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="carro"><strong>Possui Carro?</strong></label>
+                <select id="carro" class="form-control"  name="carro" >
+                  <option selected disabled value="">Selecione</option>
+                  <option value=0>Não</option>
+                  <option value=1>Sim</option>
+                  
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="fumante"><strong>Fumante?</strong></label>
+                <select id="fumante" class="form-control"  name="fumante" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option value=0>Não</option>
+                  <option value=1>Sim</option>
+                  
+                </select>
+            </div>
+            </div>
+
+
+            
+
+    <div class="row" id="botao">
+        <div class="col-md-12 mb-6">
+        <div>
+            <button class="botao" type="submit" onclick="return valida()" id="bb">Concluído</button>  
+        </div>
+        
+    </div>
+    </div>
+
+    
+
+    </form>
+
+    <script src="validacao.js"></script>
+
+
+   
+
+        
+    </body>
+    <footer>
+        <!-- <img src="img/logo.png" alt="logo"> -->
+        <div>
+        </footer>
+
+    </div>
+    </div>
+            
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+    
+</html>
+
+
+
+
+
+
+
+

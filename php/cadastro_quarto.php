@@ -19,7 +19,7 @@ if(isset($_FILES['foto_perfil_quarto'])) { /*Verifica se um arquivo foi enviado*
 
 
 
-$tamanho = $_POST["tamanho"];
+$tamanho = $_POST["tamanho"]; 
 $mob = $_POST["mobiliado"];
 $arc = $_POST["arcondicionado"];
 $tom = $_POST["quantidade-tomada"];
@@ -28,28 +28,6 @@ $desc = $_POST["descricao"];
 $id2 = $_POST["ide2"];
 $neg = $_POST["negociavel"];
 /*imagem*/
-
-/*
-echo "<p>1 $cep</p>";
-echo "<p>2 $endereco </p>";
-echo "<p>3 $complemento</p>";
-echo "<p>4 $bairro</p>";
-echo "<p>5 $cidade</p>";
-echo "<p>6 $estado</p>";
-echo "<p>7 $banheiros</p>";
-echo "<p>8 $tamanho_casa</p>";
-echo "<p>9 $valor_aluguel</p>";
-echo "<p>10 $negociavel</p>";
-echo "<p>11 $apartamento_ou_casa</p>";
-echo "<p>12 $comodos</p>";
-echo "<p>13 $quartos</p>";
-echo "<p>14 $lavanderia</p>";
-echo "<p>15 $vagas_carro</p>";
-echo "<p>16 $internet</p>";
-echo "<p>17 $imagem</p>";
-echo "<p>18 $descricao</p>";
-echo "<p>19 $id_locador</p>";*/
-
 
 
 
@@ -62,9 +40,9 @@ echo "<p>19 $id_locador</p>";*/
 
 $stmt = mysqli_prepare($mysqli, "INSERT INTO quartos (tamanho_quarto, valor, mobiliado, descricao, quantidade_tomada, arcondicionado, id_estab, foto_perfil_quarto, negociavel ) VALUES (?,?,?,?,?,?,?,?,?)");
  
-mysqli_stmt_bind_param($stmt,"iiisiiisi", $ptamanho, $pvalor, $pmob, $pdesc, $ptom, $parc, $pid2, $pimagem2, $pneg);
+mysqli_stmt_bind_param($stmt,"ddisiiisi", $ptamanho, $pvalor, $pmob, $pdesc, $ptom, $parc, $pid2, $pimagem2, $pneg);
 
-$ptamanho = $caminho;
+$ptamanho = $tamanho;
 $pvalor = $valor;
 $pmob = $mob;
 $pdesc = $desc; 
@@ -82,7 +60,7 @@ $pneg = $neg;
 mysqli_stmt_execute($stmt);
 
 
-header('location: ../feed/index.html');
+header('location: ../index.php');
 
 
 

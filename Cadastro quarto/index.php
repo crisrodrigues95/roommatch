@@ -15,8 +15,7 @@
              <!--Scripts Jquery para máscaras-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+       
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
@@ -27,21 +26,7 @@
         <title>Cadastro de Quarto</title>
     </head>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <!-- <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../Locador/index.html">Cadastro Locador</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Formulario/index.html">Cadastro Morador</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        
     </header>
                     <!-- Até aqui finalizado -->
                     <body> 
@@ -103,7 +88,7 @@
                                     
                                         <div class="row">
                                         <div class="col-md-6 mb-3">
-                                        <label for="valor"><strong>Valor aluguel </strong></label>
+                                        <label for="valor"><strong>Valor aluguel (R$) </strong></label>
                                         <input type="number" step="0.5" name="valor" class="form-control" id="valor" min=0 maxlength=100 required placeholder="Qual o valor do aluguel">
                                         </div>
 
@@ -161,7 +146,7 @@
 
     
 <footer>
-    <!-- <img src="img/logo.png" alt="logo"> -->
+  
    
 </div>
          

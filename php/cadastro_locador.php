@@ -20,24 +20,6 @@
  $cozinha = $_POST["cozinha"];
  $email = $_POST["email"];
  
- /*
- echo "<p> Nome: $nome_completo</p>";
- echo "<p> Telefone: $telefone</p>";
- echo "<p>CPF: $cpf</p>";
- echo "<p>Senha: $senha</p>";
- echo  "<p>Data de nascimento:  ($data_nascimento)</p>";
- echo  "<p>Sexo:  $sexo</p>";
- echo  "<p>É fumante?:  ($fumante)</p>";
- echo  "<p>Tem pet?:  ($pet)</p>";
- echo  "<p>Quantos pets?:  ($quant_pet)</p>";
- echo  "<p>É vegano?:  ($vegano)</p>";
- echo  "<p>É vegetariano?:  ($vegetariano)</p>";
- echo  "<p>Onde  estuda?:  ($faculdade)</p>";
- echo  "<p>Onde trabalha?:  ($trabalho)</p>";
- echo  "<p>Tem carro?:  ($tem_carro)</p>";
- echo  "<p>Tem moto?:  ($tem_vel)</p>";
- echo  "<p>Sabe cozinhar?  ($cozinha)</p>";
- echo  "<p>e-mail:  ($email)</p>";*/
  
  
  

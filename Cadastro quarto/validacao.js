@@ -1,12 +1,12 @@
- function valida(){
+function valida(){
     
-    var fileInput =  document.getElementById('foto_perfil_imovel');
-          
+    var fileInput =  document.getElementById('foto_perfil_quarto');
     var filePath = fileInput.value;
 
-    if (fileInput != ''){
-      
-    // Permitir tipo de arquivo
+    
+    if (fileInput.files.length != 0){
+
+        // Permitir tipo de arquivo
         var allowedExtensions = 
                 /(\.jpg|\.jpeg|\.png)$/i;
           
@@ -15,6 +15,17 @@
             fileInput.value = '';
             return false
         }
+    
+
+
+
     }
+    
+
+    
+    
+          
+    
+      
     
  }

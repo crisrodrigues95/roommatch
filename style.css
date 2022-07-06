@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+/* importação de fontes */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap'); 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Corpo do login */
 body {
     font-family: 'Open Sans', sans-serif;
     background-image: url(bgg.jpg);
@@ -12,11 +16,14 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+/* Estilização das imagens */
 img{
     width: 100px;
     
  
 }
+/* Container do projeto*/
+
 .container {
     display: flex;
     justify-content: center;
@@ -24,6 +31,7 @@ img{
     height: 100vh;
     background-color: transparent;
 }
+/* Card maior */
 .content {
     background-color: #fff;
     border-radius: 15px;
@@ -33,6 +41,8 @@ img{
     align-items: center;
     position: relative;
 }
+/* Card menor */
+
 .content::before {
     content: "";
     position: absolute;
@@ -45,28 +55,38 @@ img{
 
     left: 0;
 }
+/* Título */
 .title {
     font-size: 28px;
     font-weight: bold;
     text-transform: initial;
 }
+
+/* Primeiro título do Card menor  */
 .title-primary {
     color: #fff;
 }
+/* Primeiro título do Card maior  */
 .title-second {
     color: #0120f4;
 }
+
+/* Texto */
 .description {
     font-size: 14px;
     font-weight: 300;
     line-height: 30px;
 }
+
+/* Texto */
 .description-primary {
     color: #fff;
 }
+/* Texto */
 .description-second {
     color: #7f8c8d;
 }
+/* Botão */
 .btn {
     border-radius: 15px;
     text-transform: uppercase;
@@ -80,69 +100,48 @@ img{
     border: none;
     margin-top: 1rem;
 }
+/* Botão */
 .btn-primary {
     background-color: #c531a3;
     border: 1px solid #c531a3;
     transition: background-color .5s;
 }
-.btn-primary:hover {
-    background-color: #fff;
-    color: #0120f4;
-}
+
+/* Botão */
 .btn-second {
     background-color: #c531a3;
     border: 1px solid #c531a3;
     transition: background-color .5s;
 }
+/* Botão */
 .btn-second:hover {
     background-color: #fff;
     border: 1px solid #c531a3;
     color: #c531a3;
 }
+/* primeira parte do card */
 .first-content {
     display: flex;
 }
+/* segunda coluna da primeira parte do card */
 .first-content .second-column {
     z-index: 11;
 }
+/* primeira coluna da primeira parte do card */
 .first-column {
     text-align: center;
     width: 40%;
     z-index: 10;
 }
+
+/* segunda coluna */
 .second-column {
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.social-media {
-    margin: 1rem 0;
-}
-.link-social-media:not(:first-child){
-    margin-left: 10px;
-}
-.link-social-media .item-social-media {
-    transition: background-color .5s;
-}
-.link-social-media:hover .item-social-media{
-    background-color: #c531a3;
-    color: #c531a3;
-    border-color: #c531a3;
-}
-.list-social-media {
-    display: flex;
-    list-style-type: none;
-}
-.item-social-media {
-    border: 1px solid #bdc3c7;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    color: #95a5a6;
-}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -170,20 +169,25 @@ input:-webkit-autofill
     padding: 0 5px;
 }
 
-/* second content*/
+/* segunda parte do card*/
 
 .second-content {
     position: absolute;
     display: flex;
 }
+/* primeira coluna da segunda parte do card*/
 .second-content .first-column {
     order: 2;
     z-index: -1;
 }
+
+/* segunda coluna da segunda parte do card*/
 .second-content .second-column {
     order: 1;
     z-index: -1;
 }
+/* estilização da senha */
+
 .password {
     color: #34495e;
     font-size: 14px;
@@ -213,13 +217,14 @@ input:-webkit-autofill
     border-bottom-left-radius: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: slidein 1.3s; 
 
     z-index: 12;
 }
 
+/* Sequencia de estilização para a transição */
 .sign-up-js .content::before {
-    animation: slideout 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: slideout 1.3s; 
 
     z-index: 12;
 }
@@ -238,21 +243,21 @@ input:-webkit-autofill
 }
 
 
-/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
+
 .sign-in-js .first-content .second-column {
 
     z-index: -1;
     position: relative;
-    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoEsq 1.3s; 
 }
 
 .sign-up-js .second-content .second-column {
     position: relative;
     z-index: -1;
-    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoDir 1.3s; 
 }
 
-/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
+/* Deslocamento da transição */
 
 @keyframes deslocamentoEsq {
 
@@ -265,13 +270,13 @@ input:-webkit-autofill
     25% {
         left: -80px;
         opacity: .5;
-        /* z-index: 12; NÃO HÁ NECESSIDADE */
+       
     }
 
     50% {
         left: -100px;
         opacity: .2;
-        /* z-index: 12; NÃO HÁ NECESSIDADE */
+        
     }
 
     to {
@@ -291,13 +296,12 @@ input:-webkit-autofill
 
     25% {
         left: 80px;
-        /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+       
     }
 
     50% {
         left: 100px;
-        /* z-index: 12; NÃO HÁ NECESSIDADE*/
-        /* background-color: yellow;  Exemplo que dei no vídeo*/
+       
     }
 
     to {
@@ -388,7 +392,7 @@ input:-webkit-autofill
     }
     
     .sign-in-js .content::before {
-        top: 80.5%;
+        top: 65%;
         left: 0;
         border-radius: 0;
 
@@ -411,13 +415,13 @@ input:-webkit-autofill
         25% {
             top: -80px;
             opacity: .5;
-            /* z-index: 12; NÃO HÁ NECESSIDADE */
+            
         }
     
         50% {
             top: -100px;
             opacity: .2;
-            /* z-index: 12; NÃO HÁ NECESSIDADE */
+            
         }
     
         to {
@@ -437,13 +441,12 @@ input:-webkit-autofill
     
         25% {
             top: 80px;
-            /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+            
         }
     
         50% {
             top: 100px;
-            /* z-index: 12; NÃO HÁ NECESSIDADE*/
-            /* background-color: yellow;  Exemplo que dei no vídeo*/
+            
         }
     
         to {
@@ -575,3 +578,7 @@ input:-webkit-autofill
 
 
 
+
+
+
+#bot{margin-bottom: 45%; }
