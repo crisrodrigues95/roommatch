@@ -9,9 +9,9 @@ https://roommatch2022.000webhostapp.com
 
 ## Tecnologias utilizadas
 
--HTML
--CSS
--PHP
--JavaScript
--Jquery
--MySql
+- HTML
+- CSS
+- PHP
+- JavaScript
+- Jquery
+- MySql
