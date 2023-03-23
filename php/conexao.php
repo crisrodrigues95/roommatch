@@ -4,9 +4,9 @@
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $localhost = 'localhost';
-$user = 'id18773164_rommmatchadm';
-$password = 'v4oAY>(E+MuL0t!%';
-$db = 'id18773164_roommatch';
+$user = 'root';
+$password = '123456';
+$db = 'roommatch';
 
 
 $mysqli = mysqli_connect($localhost, $user, $password, $db);

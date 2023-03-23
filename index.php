@@ -1,8 +1,12 @@
+
+
 <?php
 
 //Login moradores
 
 include('php/conexao.php');
+
+
 
 $msg = "";
 
@@ -51,9 +55,9 @@ if(($_POST['tipoCad']) == 'cadMorador'){
 
 // Login locadores
 
-if(($_POST['tipoCad']) == 'cadLocador'){ //Coleta email e senha digitados
+else if(($_POST['tipoCad']) == 'cadLocador'){ //Coleta email e senha digitados
 
-    $msgl = "";
+    $msg = "";
     
 
     if(strlen($_POST['lemail']) == 0) { //Confere se e-mail e senha não estão em branco
@@ -92,12 +96,6 @@ if(($_POST['tipoCad']) == 'cadLocador'){ //Coleta email e senha digitados
     }
 
 }
-
-
-
-
-
-
 
 
 ?>
