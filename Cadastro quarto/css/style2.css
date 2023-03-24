@@ -142,7 +142,7 @@ fieldset.grupo .campo {
 } */
 .botao{
   margin-bottom: 100px;
-  margin-top: 20%;
+  margin-top: 5%;
   
 }
 /* body{
@@ -175,7 +175,7 @@ img{
  margin: 0;
 }
 body{
-  background-image: url(img/bg.jpg);
+  background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;

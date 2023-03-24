@@ -48,7 +48,7 @@ body{
 input, select, textarea, button {
   font-family: sans-serif;
   font-size: 1em;
-  color: #ffffff;
+  color: white;
   border-radius: 5px;
 }
 
@@ -141,7 +141,8 @@ fieldset.grupo .campo {
   padding-bottom: 25px;
 } */
 .botao{
-  margin-top: 30px;
+  
+  margin-top: 1%;
   
 }
 /* body{
@@ -174,7 +175,7 @@ img{
  margin: 0;
 }
 body{
-  background-image: url(img/bg.jpg);
+  background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -838,19 +839,32 @@ body{
     }
   }
 
-  @media (max-width: 100px)
-  {
-    #dd{width:calc 80% max-content} 
-  }
 
+  
+  
   @media (max-width: 575.98px) {
 
     .contact-pop .content {
 
-      padding-bottom: 110% ;
+      padding-bottom: 220% ;
       margin-top: 10%;
-    }
-  }
 
-  
-  
+    }
+
+    #foto_perfil_imovel{
+
+      font-size: small;
+    
+    
+    
+    
+     }
+
+     .botao{
+
+      margin-top: 0.00001%;
+
+      
+     }
+
+  }
